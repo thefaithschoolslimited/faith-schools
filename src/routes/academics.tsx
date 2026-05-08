@@ -36,7 +36,7 @@ const programs = [
     eyebrow: "JSS1 – JSS2 – JSS3",
     title: "Junior Secondary School",
     body: "An inquiry-driven program with science labs, project work and leadership opportunities — preparing students for the BECE and beyond.",
-    points: ["Mathematics & English", "Basic Science & Technology", "Business & Agriculture", "Cultural & Creative Arts", "Computer & Coding", "Career & guidance counselling"],
+    points: ["Mathematics & English", "Basic Science & Technology", "Business & Agriculture", "Cultural & Creative Arts", "Computer Studies", "Career & guidance counselling"],
   },
 ];
 
