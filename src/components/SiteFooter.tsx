@@ -33,7 +33,7 @@ export function SiteFooter() {
             <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 text-gold" /> 12 Faith Avenue, Lagos, Nigeria</li>
             <li className="flex items-start gap-2"><Phone className="mt-0.5 h-4 w-4 text-gold" /> 0810 842 0754 (Call / WhatsApp)</li>
             <li className="flex items-start gap-2"><Phone className="mt-0.5 h-4 w-4 text-gold" /> 0805 938 4727 (Call / WhatsApp)</li>
-            <li className="flex items-start gap-2"><Mail className="mt-0.5 h-4 w-4 text-gold" /> hello@thefaithschool.ng</li>
+            <li className="flex items-start gap-2"><Mail className="mt-0.5 h-4 w-4 text-gold" /> thefaithschoollimited@gmail.com</li>
           </ul>
         </div>
 

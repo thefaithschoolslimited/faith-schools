@@ -48,7 +48,7 @@ function ContactPage() {
             {[
               { icon: MapPin, title: "Visit us", body: "12 Faith Avenue, Lagos, Nigeria" },
               { icon: Phone, title: "Call / WhatsApp", body: "0810 842 0754  •  0805 938 4727" },
-              { icon: Mail, title: "Email", body: "hello@thefaithschool.ng" },
+              { icon: Mail, title: "Email", body: "thefaithschoollimited@gmail.com" },
               { icon: Clock, title: "Office hours", body: "Mon – Thu · 7:00 am – 3:00 pm  |  Fri · 7:00 am – 1:00 pm" },
             ].map(({ icon: Icon, title, body }) => (
               <div key={title} className="flex items-start gap-4 rounded-2xl border border-border bg-card p-5 shadow-soft">
