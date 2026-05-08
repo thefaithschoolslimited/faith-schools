@@ -46,7 +46,7 @@ function ContactPage() {
         <div className="lg:col-span-5">
           <div className="space-y-5">
             {[
-              { icon: MapPin, title: "Visit us", body: "12 Faith Avenue, Lagos, Nigeria" },
+              { icon: MapPin, title: "Visit us", body: "Ayetoro, Oke-Igbo, Ondo State, Nigeria" },
               { icon: Phone, title: "Call / WhatsApp", body: "0810 842 0754  •  0805 938 4727" },
               { icon: Mail, title: "Email", body: "thefaithschoollimited@gmail.com" },
               { icon: Clock, title: "Office hours", body: "Mon – Thu · 7:00 am – 3:00 pm  |  Fri · 7:00 am – 1:00 pm" },

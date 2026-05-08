@@ -30,7 +30,7 @@ export function SiteFooter() {
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">Contact</p>
           <ul className="mt-4 space-y-3 text-sm text-primary-foreground/80">
-            <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 text-gold" /> 12 Faith Avenue, Lagos, Nigeria</li>
+            <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 text-gold" /> Ayetoro, Oke-Igbo, Ondo State, Nigeria</li>
             <li className="flex items-start gap-2"><Phone className="mt-0.5 h-4 w-4 text-gold" /> 0810 842 0754 (Call / WhatsApp)</li>
             <li className="flex items-start gap-2"><Phone className="mt-0.5 h-4 w-4 text-gold" /> 0805 938 4727 (Call / WhatsApp)</li>
             <li className="flex items-start gap-2"><Mail className="mt-0.5 h-4 w-4 text-gold" /> thefaithschoollimited@gmail.com</li>
