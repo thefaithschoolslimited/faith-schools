@@ -81,7 +81,7 @@ function AcademicsPage() {
           <div className="lg:col-span-8">
             <h2 className="font-display text-4xl font-bold text-primary">Beyond the classroom</h2>
             <p className="mt-4 max-w-2xl text-muted-foreground">
-              Music, drama, coding, sports, debate and our weekly chapel give every child a chance to discover their gifts and lead with confidence.
+              Music, drama, sports, debate and our weekly chapel give every child a chance to discover their gifts and lead with confidence.
             </p>
           </div>
           <div className="lg:col-span-4 lg:text-right">
