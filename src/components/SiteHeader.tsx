@@ -42,8 +42,8 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <a href="tel:+2348000000000" className="flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-primary">
-            <Phone className="h-4 w-4" /> +234 800 000 0000
+          <a href="tel:+2348108420754" className="flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-primary">
+            <Phone className="h-4 w-4" /> 0810 842 0754
           </a>
           <Link
             to="/admissions"

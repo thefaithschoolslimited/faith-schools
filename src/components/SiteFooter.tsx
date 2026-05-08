@@ -31,7 +31,8 @@ export function SiteFooter() {
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">Contact</p>
           <ul className="mt-4 space-y-3 text-sm text-primary-foreground/80">
             <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 text-gold" /> 12 Faith Avenue, Lagos, Nigeria</li>
-            <li className="flex items-start gap-2"><Phone className="mt-0.5 h-4 w-4 text-gold" /> +234 800 000 0000</li>
+            <li className="flex items-start gap-2"><Phone className="mt-0.5 h-4 w-4 text-gold" /> 0810 842 0754 (Call / WhatsApp)</li>
+            <li className="flex items-start gap-2"><Phone className="mt-0.5 h-4 w-4 text-gold" /> 0805 938 4727 (Call / WhatsApp)</li>
             <li className="flex items-start gap-2"><Mail className="mt-0.5 h-4 w-4 text-gold" /> hello@thefaithschool.ng</li>
           </ul>
         </div>
@@ -39,9 +40,9 @@ export function SiteFooter() {
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">School Hours</p>
           <ul className="mt-4 space-y-2 text-sm text-primary-foreground/80">
-            <li>Mon – Fri: 7:30 am – 3:30 pm</li>
-            <li>Sat: 9:00 am – 1:00 pm (Office)</li>
-            <li>Sun: Closed</li>
+            <li>Mon – Thu: 7:00 am – 3:00 pm</li>
+            <li>Fri: 7:00 am – 1:00 pm</li>
+            <li>Sat &amp; Sun: Closed</li>
           </ul>
           <div className="mt-5 flex gap-3">
             <a href="#" aria-label="Facebook" className="rounded-full border border-primary-foreground/20 p-2 hover:border-gold hover:text-gold"><Facebook className="h-4 w-4" /></a>

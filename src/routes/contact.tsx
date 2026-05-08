@@ -47,9 +47,9 @@ function ContactPage() {
           <div className="space-y-5">
             {[
               { icon: MapPin, title: "Visit us", body: "12 Faith Avenue, Lagos, Nigeria" },
-              { icon: Phone, title: "Call us", body: "+234 800 000 0000" },
+              { icon: Phone, title: "Call / WhatsApp", body: "0810 842 0754  •  0805 938 4727" },
               { icon: Mail, title: "Email", body: "hello@thefaithschool.ng" },
-              { icon: Clock, title: "Office hours", body: "Mon – Fri · 7:30 am – 4:00 pm" },
+              { icon: Clock, title: "Office hours", body: "Mon – Thu · 7:00 am – 3:00 pm  |  Fri · 7:00 am – 1:00 pm" },
             ].map(({ icon: Icon, title, body }) => (
               <div key={title} className="flex items-start gap-4 rounded-2xl border border-border bg-card p-5 shadow-soft">
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gold-gradient text-gold-foreground">
