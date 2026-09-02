@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, BookOpen, Heart, Trophy, Users, Sparkles, GraduationCap } from "lucide-react";
-import hero from "@/assets/hero-students.jpg";
+import heroLoop from "@/assets/hero-loop.mp4.asset.json";
 import creche from "@/assets/creche.jpg";
 import primary from "@/assets/primary.jpg";
 import secondary from "@/assets/secondary.jpg";
@@ -19,11 +19,19 @@ function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative overflow-hidden bg-hero-gradient text-primary-foreground">
-        <div className="absolute inset-0 opacity-25">
-          <img src={hero} alt="" width={1600} height={1100} className="h-full w-full object-cover" />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/70 to-transparent" />
+      <section className="relative min-h-[85vh] overflow-hidden text-primary-foreground">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="absolute inset-0 -z-10 h-full w-full object-cover"
+          poster={primary}
+        >
+          <source src={heroLoop.url} type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/60" />
         <div className="container-tight relative grid gap-12 py-24 md:py-32 lg:grid-cols-12 lg:items-center">
           <div className="lg:col-span-7">
             <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-white/5 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-gold">
