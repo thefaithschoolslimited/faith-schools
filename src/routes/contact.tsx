@@ -33,16 +33,16 @@ function ContactPage() {
   return (
     <>
       <section className="bg-hero-gradient text-primary-foreground">
-        <div className="container-tight py-20 md:py-28">
+        <div className="container-tight py-14 sm:py-20 md:py-28">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">Contact</p>
-          <h1 className="mt-4 max-w-3xl font-display text-5xl font-bold leading-tight md:text-6xl">We'd love to hear from you</h1>
+          <h1 className="mt-4 max-w-3xl font-display text-3xl font-bold leading-tight sm:text-4xl md:text-6xl">We'd love to hear from you</h1>
           <p className="mt-6 max-w-2xl text-lg text-primary-foreground/80">
             Whether you're considering a place for your child or just have a question — our team is here to help.
           </p>
         </div>
       </section>
 
-      <section className="container-tight grid gap-10 py-20 lg:grid-cols-12">
+      <section className="container-tight grid gap-10 py-14 sm:py-20 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <div className="space-y-5">
             {[

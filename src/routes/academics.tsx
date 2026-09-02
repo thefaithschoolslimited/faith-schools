@@ -44,16 +44,16 @@ function AcademicsPage() {
   return (
     <>
       <section className="bg-hero-gradient text-primary-foreground">
-        <div className="container-tight py-20 md:py-28">
+        <div className="container-tight py-14 sm:py-20 md:py-28">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">Academics</p>
-          <h1 className="mt-4 max-w-3xl font-display text-5xl font-bold leading-tight md:text-6xl">A learning journey from Crèche to JSS3</h1>
+          <h1 className="mt-4 max-w-3xl font-display text-3xl font-bold leading-tight sm:text-4xl md:text-6xl">A learning journey from Crèche to JSS3</h1>
           <p className="mt-6 max-w-2xl text-lg text-primary-foreground/80">
             Each stage of our program is intentionally designed to challenge, support and celebrate your child — academically, spiritually and socially.
           </p>
         </div>
       </section>
 
-      <section className="container-tight space-y-16 py-20">
+      <section className="container-tight space-y-16 py-14 sm:py-20">
         {programs.map((p, i) => (
           <article key={p.title} className={`grid gap-10 lg:grid-cols-2 lg:items-center ${i % 2 ? "lg:[&>div:first-child]:order-2" : ""}`}>
             <div className="overflow-hidden rounded-3xl shadow-elegant">
@@ -61,7 +61,7 @@ function AcademicsPage() {
             </div>
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">{p.eyebrow}</p>
-              <h2 className="mt-3 font-display text-4xl font-bold text-primary">{p.title}</h2>
+              <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl text-primary">{p.title}</h2>
               <p className="mt-4 text-muted-foreground">{p.body}</p>
               <ul className="mt-6 grid gap-2 sm:grid-cols-2">
                 {p.points.map((pt) => (
@@ -76,10 +76,10 @@ function AcademicsPage() {
         ))}
       </section>
 
-      <section className="bg-cream py-20">
+      <section className="bg-cream py-14 sm:py-20">
         <div className="container-tight grid gap-10 lg:grid-cols-12 lg:items-center">
           <div className="lg:col-span-8">
-            <h2 className="font-display text-4xl font-bold text-primary">Beyond the classroom</h2>
+            <h2 className="font-display text-3xl font-bold sm:text-4xl text-primary">Beyond the classroom</h2>
             <p className="mt-4 max-w-2xl text-muted-foreground">
               Music, drama, sports, debate and our weekly chapel give every child a chance to discover their gifts and lead with confidence.
             </p>

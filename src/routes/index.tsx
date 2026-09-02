@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, BookOpen, Heart, Trophy, Users, Sparkles, GraduationCap } from "lucide-react";
 import heroLoop from "@/assets/hero-loop.mp4.asset.json";
+import { HeroVideo } from "@/components/HeroVideo";
 import creche from "@/assets/creche.jpg";
 import primary from "@/assets/primary.jpg";
 import secondary from "@/assets/secondary.jpg";
@@ -19,48 +20,38 @@ function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative min-h-[85vh] overflow-hidden text-primary-foreground">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          className="absolute inset-0 -z-10 h-full w-full object-cover"
-          poster={primary}
-        >
-          <source src={heroLoop.url} type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/60" />
-        <div className="container-tight relative grid gap-12 py-24 md:py-32 lg:grid-cols-12 lg:items-center">
-          <div className="lg:col-span-7">
-            <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-white/5 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-gold">
-              <Sparkles className="h-3.5 w-3.5" /> Admissions open · 2026/2027
+      <section className="relative flex min-h-[80vh] items-center overflow-hidden text-primary-foreground sm:min-h-[85vh]">
+        <HeroVideo src={heroLoop.url} poster={primary} className="absolute inset-0 -z-10 overflow-hidden" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/40 to-black/60" />
+        <div className="container-tight relative grid w-full gap-12 py-16 sm:py-24 md:py-32 lg:grid-cols-12 lg:items-center">
+          <div className="min-w-0 lg:col-span-7">
+            <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-white/5 px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.2em] text-gold sm:px-4 sm:text-xs">
+              <Sparkles className="h-3.5 w-3.5 shrink-0" /> Admissions open · 2026/2027
             </span>
-            <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] sm:text-6xl lg:text-7xl">
+            <h1 className="mt-6 font-display text-[2.1rem] font-bold leading-[1.1] sm:text-5xl md:text-6xl lg:text-7xl">
               Where <span className="italic text-gold">faith</span> meets a love for learning.
             </h1>
-            <p className="mt-6 max-w-xl text-lg text-primary-foreground/80">
+            <p className="mt-5 max-w-xl text-base text-primary-foreground/80 sm:mt-6 sm:text-lg">
               The Faith School Limited offers a nurturing, Christ-centered education from Crèche through JSS3 — building strong minds, kind hearts, and bold character.
             </p>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <Link to="/admissions" className="inline-flex items-center gap-2 rounded-full bg-gold-gradient px-7 py-3.5 text-sm font-semibold text-gold-foreground shadow-elegant transition-transform hover:-translate-y-0.5">
+            <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4">
+              <Link to="/admissions" className="inline-flex items-center justify-center gap-2 rounded-full bg-gold-gradient px-7 py-3.5 text-sm font-semibold text-gold-foreground shadow-elegant transition-transform hover:-translate-y-0.5">
                 Begin Application <ArrowRight className="h-4 w-4" />
               </Link>
-              <Link to="/academics" className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/30 px-7 py-3.5 text-sm font-semibold text-primary-foreground hover:bg-white/10">
+              <Link to="/academics" className="inline-flex items-center justify-center gap-2 rounded-full border border-primary-foreground/30 px-7 py-3.5 text-sm font-semibold text-primary-foreground hover:bg-white/10">
                 Explore Academics
               </Link>
             </div>
 
-            <dl className="mt-14 grid max-w-lg grid-cols-3 gap-6 border-t border-white/15 pt-8">
+            <dl className="mt-10 grid max-w-lg grid-cols-3 gap-4 border-t border-white/15 pt-8 sm:mt-14 sm:gap-6">
               {[
                 { k: "15+", v: "Years of service" },
                 { k: "1:12", v: "Teacher ratio" },
                 { k: "98%", v: "Parent satisfaction" },
               ].map((s) => (
-                <div key={s.v}>
-                  <dt className="font-display text-3xl font-bold text-gold">{s.k}</dt>
-                  <dd className="mt-1 text-xs uppercase tracking-wider text-primary-foreground/70">{s.v}</dd>
+                <div key={s.v} className="min-w-0">
+                  <dt className="font-display text-2xl font-bold text-gold sm:text-3xl">{s.k}</dt>
+                  <dd className="mt-1 text-[10px] uppercase tracking-wider text-primary-foreground/70 sm:text-xs">{s.v}</dd>
                 </div>
               ))}
             </dl>
@@ -68,11 +59,12 @@ function HomePage() {
         </div>
       </section>
 
+
       {/* VALUES */}
-      <section className="container-tight py-24">
+      <section className="container-tight py-16 sm:py-24">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Our Promise</p>
-          <h2 className="mt-3 font-display text-4xl font-bold text-primary md:text-5xl">An education built on four pillars</h2>
+          <h2 className="mt-3 font-display text-3xl font-bold text-primary sm:text-4xl md:text-5xl">An education built on four pillars</h2>
           <p className="mt-4 text-muted-foreground">
             Every classroom, lesson and conversation at The Faith School is anchored in values that prepare your child for life.
           </p>
@@ -97,12 +89,12 @@ function HomePage() {
       </section>
 
       {/* PROGRAMS */}
-      <section className="bg-cream py-24">
+      <section className="bg-cream py-16 sm:py-24">
         <div className="container-tight">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div className="max-w-xl">
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Programs</p>
-              <h2 className="mt-3 font-display text-4xl font-bold text-primary md:text-5xl">From first steps to junior secondary</h2>
+              <h2 className="mt-3 font-display text-3xl font-bold text-primary sm:text-4xl md:text-5xl">From first steps to junior secondary</h2>
             </div>
             <Link to="/academics" className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-gold">
               View all programs <ArrowRight className="h-4 w-4" />
@@ -131,8 +123,8 @@ function HomePage() {
       </section>
 
       {/* TESTIMONIAL */}
-      <section className="container-tight py-24">
-        <div className="grid gap-12 rounded-3xl bg-primary p-10 text-primary-foreground md:p-16 lg:grid-cols-12 lg:items-center">
+      <section className="container-tight py-16 sm:py-24">
+        <div className="grid gap-12 rounded-3xl bg-primary p-6 text-primary-foreground sm:p-10 md:p-16 lg:grid-cols-12 lg:items-center">
           <div className="lg:col-span-7">
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Parent voices</p>
             <blockquote className="mt-6 font-display text-3xl leading-snug md:text-4xl">
