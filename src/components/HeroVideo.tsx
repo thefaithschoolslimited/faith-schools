@@ -31,13 +31,13 @@ export function HeroVideo({ src, poster, className }: HeroVideoProps) {
         if (!entries.some((e) => e.isIntersecting)) return;
         observer.disconnect();
         const start = () => setShouldLoad(true);
-        if ("requestIdleCallback" in window) {
-          idleId = (window as unknown as {
-            requestIdleCallback: (cb: () => void, o?: { timeout: number }) => number;
-          }).requestIdleCallback(start, { timeout: 2500 });
-        } else {
-          idleId = window.setTimeout(start, 600);
-        }
+        const w = window as unknown as {
+          requestIdleCallback?: (cb: () => void, o?: { timeout: number }) => number;
+          setTimeout: (cb: () => void, ms: number) => number;
+        };
+        idleId = w.requestIdleCallback
+          ? w.requestIdleCallback(start, { timeout: 2500 })
+          : w.setTimeout(start, 600);
       },
       { rootMargin: "200px" },
     );
