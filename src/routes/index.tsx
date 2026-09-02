@@ -23,7 +23,7 @@ function HomePage() {
       <section className="relative flex min-h-[80vh] items-center overflow-hidden text-primary-foreground sm:min-h-[85vh]">
         <HeroVideo src={heroLoop.url} poster={primary} className="absolute inset-0 -z-10 overflow-hidden" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/40 to-black/60" />
-        <div className="container-tight relative grid w-full gap-12 py-20 sm:py-24 md:py-32 lg:grid-cols-12 lg:items-center">
+        <div className="container-tight relative grid w-full gap-12 py-14 sm:py-20 sm:py-24 md:py-32 lg:grid-cols-12 lg:items-center">
           <div className="min-w-0 lg:col-span-7">
             <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-white/5 px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.2em] text-gold sm:px-4 sm:text-xs">
               <Sparkles className="h-3.5 w-3.5 shrink-0" /> Admissions open · 2026/2027
@@ -61,10 +61,10 @@ function HomePage() {
 
 
       {/* VALUES */}
-      <section className="container-tight py-24">
+      <section className="container-tight py-16 sm:py-16 sm:py-24">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Our Promise</p>
-          <h2 className="mt-3 font-display text-4xl font-bold text-primary md:text-5xl">An education built on four pillars</h2>
+          <h2 className="mt-3 font-display text-3xl font-bold text-primary sm:text-4xl md:text-5xl">An education built on four pillars</h2>
           <p className="mt-4 text-muted-foreground">
             Every classroom, lesson and conversation at The Faith School is anchored in values that prepare your child for life.
           </p>
@@ -89,12 +89,12 @@ function HomePage() {
       </section>
 
       {/* PROGRAMS */}
-      <section className="bg-cream py-24">
+      <section className="bg-cream py-16 sm:py-24">
         <div className="container-tight">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div className="max-w-xl">
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Programs</p>
-              <h2 className="mt-3 font-display text-4xl font-bold text-primary md:text-5xl">From first steps to junior secondary</h2>
+              <h2 className="mt-3 font-display text-3xl font-bold text-primary sm:text-4xl md:text-5xl">From first steps to junior secondary</h2>
             </div>
             <Link to="/academics" className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-gold">
               View all programs <ArrowRight className="h-4 w-4" />
@@ -123,8 +123,8 @@ function HomePage() {
       </section>
 
       {/* TESTIMONIAL */}
-      <section className="container-tight py-24">
-        <div className="grid gap-12 rounded-3xl bg-primary p-10 text-primary-foreground md:p-16 lg:grid-cols-12 lg:items-center">
+      <section className="container-tight py-16 sm:py-16 sm:py-24">
+        <div className="grid gap-12 rounded-3xl bg-primary p-6 text-primary-foreground sm:p-10 md:p-16 lg:grid-cols-12 lg:items-center">
           <div className="lg:col-span-7">
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Parent voices</p>
             <blockquote className="mt-6 font-display text-3xl leading-snug md:text-4xl">

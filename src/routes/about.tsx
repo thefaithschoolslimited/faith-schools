@@ -19,13 +19,13 @@ function AboutPage() {
     <>
       <PageHeader eyebrow="About us" title="A school built on faith and excellence" intro="For over a decade, we've helped Nigerian children grow into curious learners and kind people — guided by Christian values, gifted teachers and a thriving community." />
 
-      <section className="container-tight grid gap-12 py-20 lg:grid-cols-2 lg:items-center">
+      <section className="container-tight grid gap-12 py-14 sm:py-20 lg:grid-cols-2 lg:items-center">
         <div className="overflow-hidden rounded-3xl shadow-elegant">
           <img src={primary} alt="Students at The Faith School" loading="lazy" width={1200} height={900} className="h-full w-full object-cover" />
         </div>
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Our story</p>
-          <h2 className="mt-3 font-display text-4xl font-bold text-primary">Rooted in purpose. Growing every day.</h2>
+          <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl text-primary">Rooted in purpose. Growing every day.</h2>
           <p className="mt-5 text-muted-foreground">
             Founded by a small group of educators and parents who believed children deserve more than just a curriculum, The Faith School Limited has grown into a vibrant community serving learners from Crèche through JSS3.
           </p>
@@ -35,7 +35,7 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-cream py-20">
+      <section className="bg-cream py-14 sm:py-20">
         <div className="container-tight grid gap-6 md:grid-cols-3">
           {[
             { icon: Target, title: "Our Mission", body: "To raise a generation of God-loving, knowledge-seeking and character-driven young people equipped to serve their world." },
@@ -53,9 +53,9 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="container-tight py-20">
+      <section className="container-tight py-14 sm:py-20">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Leadership</p>
-        <h2 className="mt-3 font-display text-4xl font-bold text-primary">Meet our leadership</h2>
+        <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl text-primary">Meet our leadership</h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {[
             { name: "Dr. Grace Adebayo", role: "Founder & Proprietress" },
@@ -79,9 +79,9 @@ function AboutPage() {
 function PageHeader({ eyebrow, title, intro }: { eyebrow: string; title: string; intro: string }) {
   return (
     <section className="bg-hero-gradient text-primary-foreground">
-      <div className="container-tight py-20 md:py-28">
+      <div className="container-tight py-14 sm:py-20 md:py-28">
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{eyebrow}</p>
-        <h1 className="mt-4 max-w-3xl font-display text-5xl font-bold leading-tight md:text-6xl">{title}</h1>
+        <h1 className="mt-4 max-w-3xl font-display text-3xl font-bold leading-tight sm:text-4xl md:text-6xl">{title}</h1>
         <p className="mt-6 max-w-2xl text-lg text-primary-foreground/80">{intro}</p>
       </div>
     </section>

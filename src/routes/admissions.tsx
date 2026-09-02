@@ -45,20 +45,20 @@ function AdmissionsPage() {
   return (
     <>
       <section className="bg-hero-gradient text-primary-foreground">
-        <div className="container-tight py-20 md:py-28">
+        <div className="container-tight py-14 sm:py-20 md:py-28">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">Admissions</p>
-          <h1 className="mt-4 max-w-3xl font-display text-5xl font-bold leading-tight md:text-6xl">Begin your child's journey</h1>
+          <h1 className="mt-4 max-w-3xl font-display text-3xl font-bold leading-tight sm:text-4xl md:text-6xl">Begin your child's journey</h1>
           <p className="mt-6 max-w-2xl text-lg text-primary-foreground/80">
             Applications are open for Crèche through JSS3. Our team will guide you through every step of the process.
           </p>
         </div>
       </section>
 
-      <section className="container-tight py-20">
+      <section className="container-tight py-14 sm:py-20">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {steps.map((s) => (
             <article key={s.n} className="rounded-2xl border border-border bg-card p-7 shadow-soft">
-              <p className="font-display text-4xl font-bold text-gold">{s.n}</p>
+              <p className="font-display text-3xl font-bold sm:text-4xl text-gold">{s.n}</p>
               <h3 className="mt-3 font-display text-xl font-bold text-primary">{s.t}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{s.d}</p>
             </article>
@@ -66,10 +66,10 @@ function AdmissionsPage() {
         </div>
       </section>
 
-      <section className="bg-cream py-20">
+      <section className="bg-cream py-14 sm:py-20">
         <div className="container-tight grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <h2 className="font-display text-4xl font-bold text-primary">What you'll need</h2>
+            <h2 className="font-display text-3xl font-bold sm:text-4xl text-primary">What you'll need</h2>
             <ul className="mt-6 space-y-3 text-sm text-foreground/80">
               {[
                 "Child's birth certificate",

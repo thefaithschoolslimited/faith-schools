@@ -29,16 +29,16 @@ function GalleryPage() {
   return (
     <>
       <section className="bg-hero-gradient text-primary-foreground">
-        <div className="container-tight py-20 md:py-28">
+        <div className="container-tight py-14 sm:py-20 md:py-28">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">Gallery</p>
-          <h1 className="mt-4 max-w-3xl font-display text-5xl font-bold leading-tight md:text-6xl">Life at The Faith School</h1>
+          <h1 className="mt-4 max-w-3xl font-display text-3xl font-bold leading-tight sm:text-4xl md:text-6xl">Life at The Faith School</h1>
           <p className="mt-6 max-w-2xl text-lg text-primary-foreground/80">
             From quiet reading moments to joyful playtime — a peek inside our classrooms and corridors.
           </p>
         </div>
       </section>
 
-      <section className="container-tight py-20">
+      <section className="container-tight py-14 sm:py-20">
         <div className="grid auto-rows-[220px] gap-4 md:grid-cols-3 lg:grid-cols-4">
           {items.map((it, i) => (
             <figure key={i} className={`group relative overflow-hidden rounded-2xl shadow-soft ${it.span ?? ""}`}>
