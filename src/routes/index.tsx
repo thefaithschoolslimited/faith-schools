@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, BookOpen, Heart, Trophy, Users, Sparkles, GraduationCap } from "lucide-react";
 import heroLoop from "@/assets/hero-loop.mp4.asset.json";
+import { HeroVideo } from "@/components/HeroVideo";
 import creche from "@/assets/creche.jpg";
 import primary from "@/assets/primary.jpg";
 import secondary from "@/assets/secondary.jpg";
