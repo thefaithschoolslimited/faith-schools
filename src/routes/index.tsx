@@ -11,7 +11,10 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "The Faith School Limited — Faith, Excellence, Character" },
       { name: "description", content: "A Christ-centered Nigerian school offering quality education from Crèche to JSS3. Discover our programs and apply today." },
+      { property: "og:title", content: "The Faith School Limited — Faith, Excellence, Character" },
+      { property: "og:description", content: "Quality Christ-centered education from Crèche to JSS3 in Ayetoro, Oke-Igbo, Ondo State." },
     ],
+    links: [{ rel: "preload", as: "image", href: primary, fetchPriority: "high" }],
   }),
   component: HomePage,
 });
