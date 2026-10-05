@@ -45,9 +45,9 @@ export function SiteFooter() {
             <li>Sat &amp; Sun: Closed</li>
           </ul>
           <div className="mt-5 flex gap-3">
-            <a href="#" aria-label="Facebook" className="rounded-full border border-primary-foreground/20 p-2 hover:border-gold hover:text-gold"><Facebook className="h-4 w-4" /></a>
+            <a href="https://www.facebook.com/profile.php?id=61593655626891" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="rounded-full border border-primary-foreground/20 p-2 hover:border-gold hover:text-gold"><Facebook className="h-4 w-4" /></a>
             <a href="#" aria-label="Instagram" className="rounded-full border border-primary-foreground/20 p-2 hover:border-gold hover:text-gold"><Instagram className="h-4 w-4" /></a>
-            <a href="#" aria-label="YouTube" className="rounded-full border border-primary-foreground/20 p-2 hover:border-gold hover:text-gold"><Youtube className="h-4 w-4" /></a>
+            <a href="https://www.youtube.com/@FaithSchoolsLimited" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="rounded-full border border-primary-foreground/20 p-2 hover:border-gold hover:text-gold"><Youtube className="h-4 w-4" /></a>
           </div>
         </div>
       </div>
