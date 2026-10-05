@@ -7,6 +7,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
 import { CheckCircle2 } from "lucide-react";
+import { useServerFn } from "@tanstack/react-start";
+import { submitApplication } from "@/lib/applications.functions";
 
 export const Route = createFileRoute("/admissions")({
   head: () => ({
@@ -29,17 +31,31 @@ const steps = [
 
 function AdmissionsPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const send = useServerFn(submitApplication);
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const data = new FormData(e.currentTarget);
-    if (!data.get("parent") || !data.get("email") || !data.get("child") || !data.get("class")) {
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    const g = (k: string) => String(data.get(k) ?? "");
+    if (!g("parent") || !g("email") || !g("child") || !g("class")) {
       toast.error("Please fill in all required fields.");
       return;
     }
-    toast.success("Application received! We'll be in touch within 48 hours.");
-    setSubmitted(true);
-    e.currentTarget.reset();
+    setSending(true);
+    try {
+      await send({
+        data: { parent: g("parent"), email: g("email"), phone: g("phone"), child: g("child"), klass: g("class"), dob: g("dob"), message: g("message") },
+      });
+      toast.success("Application received! We'll be in touch within 48 hours.");
+      setSubmitted(true);
+      form.reset();
+    } catch {
+      toast.error("Sorry, we couldn't send your application. Please try again or call 0810 842 0754.");
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
@@ -127,8 +143,8 @@ function AdmissionsPage() {
                 <Textarea id="message" name="message" rows={4} placeholder="Tell us anything we should know about your child." />
               </div>
 
-              <Button type="submit" size="lg" className="mt-7 w-full rounded-full bg-gold-gradient text-gold-foreground hover:opacity-90">
-                {submitted ? "Submit another inquiry" : "Submit application"}
+              <Button type="submit" size="lg" disabled={sending} className="mt-7 w-full rounded-full bg-gold-gradient text-gold-foreground hover:opacity-90">
+                {sending ? "Sending..." : submitted ? "Submit another inquiry" : "Submit application"}
               </Button>
             </form>
           </div>
