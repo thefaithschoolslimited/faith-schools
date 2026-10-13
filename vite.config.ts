@@ -5,6 +5,9 @@ import { VitePWA } from "vite-plugin-pwa";
 export default defineConfig({
   tanstackStart: {
     server: { entry: "server" },
+    // Every page is prerendered to plain HTML so the site can be hosted statically (e.g. GitHub Pages).
+    pages: ["/", "/about", "/academics", "/admissions", "/gallery", "/contact"].map((path) => ({ path })),
+    prerender: { enabled: true, autoStaticPathsDiscovery: false },
   },
   vite: {
     plugins: [
