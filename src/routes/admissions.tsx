@@ -7,8 +7,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
 import { CheckCircle2 } from "lucide-react";
-import { useServerFn } from "@tanstack/react-start";
-import { submitApplication } from "@/lib/applications.functions";
 
 export const Route = createFileRoute("/admissions")({
   head: () => ({
@@ -32,7 +30,6 @@ const steps = [
 function AdmissionsPage() {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
-  const send = useServerFn(submitApplication);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -45,9 +42,24 @@ function AdmissionsPage() {
     }
     setSending(true);
     try {
-      await send({
-        data: { parent: g("parent"), email: g("email"), phone: g("phone"), child: g("child"), klass: g("class"), dob: g("dob"), message: g("message") },
+      const res = await fetch("https://formsubmit.co/ajax/thefaithschoollimited@gmail.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          _subject: `New application: ${g("child")} (${g("class")})`,
+          _replyto: g("email"),
+          _template: "table",
+          _captcha: "false",
+          "Parent / Guardian": g("parent"),
+          Email: g("email"),
+          Phone: g("phone") || "-",
+          "Child's name": g("child"),
+          "Class applying for": g("class"),
+          "Date of birth": g("dob") || "-",
+          Message: g("message") || "-",
+        }),
       });
+      if (!res.ok) throw new Error(String(res.status));
       toast.success("Application received! We'll be in touch within 48 hours.");
       setSubmitted(true);
       form.reset();
