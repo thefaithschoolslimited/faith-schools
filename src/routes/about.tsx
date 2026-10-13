@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Target, Eye, HeartHandshake } from "lucide-react";
 import primary from "@/assets/primary.jpg";
+import founder from "@/assets/founder.jpg.asset.json";
+import headOfSchool from "@/assets/head-of-school.jpg.asset.json";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -58,14 +60,18 @@ function AboutPage() {
         <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl text-primary">Meet our leadership</h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {[
-            { name: "Dr. Grace Adebayo", role: "Founder & Proprietress" },
-            { name: "Mr. Samuel Ojo", role: "Head of School" },
-            { name: "Mrs. Funmi Eze", role: "Head of Early Years" },
+            { name: "Kolajo Joseph", role: "Founder", img: founder.url },
+            { name: "Kolajo Ajibola Esther", role: "Head of School", img: headOfSchool.url },
+            { name: "Mrs. Esan", role: "Head of Early Years", img: "" },
           ].map((p) => (
             <article key={p.name} className="rounded-2xl border border-border bg-card p-8 text-center shadow-soft">
-              <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gold-gradient font-display text-3xl font-bold text-gold-foreground">
-                {p.name.charAt(0)}
-              </div>
+              {p.img ? (
+                <img src={p.img} alt={p.name} loading="lazy" width={500} height={600} className="mx-auto h-40 w-40 rounded-full border-4 border-gold object-cover object-top" />
+              ) : (
+                <div className="mx-auto flex h-40 w-40 items-center justify-center rounded-full bg-gold-gradient font-display text-5xl font-bold text-gold-foreground">
+                  E
+                </div>
+              )}
               <h3 className="mt-5 font-display text-xl font-bold text-primary">{p.name}</h3>
               <p className="mt-1 text-sm text-muted-foreground">{p.role}</p>
             </article>
